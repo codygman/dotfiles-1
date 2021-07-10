@@ -45,7 +45,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  services.xserver.videoDrivers = [ "intel" "ati" "amdgpu" ];
 
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
