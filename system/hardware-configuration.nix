@@ -8,29 +8,23 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/ebfa7def-27e4-4ce9-a402-05cab44ac348";
+    { device = "/dev/disk/by-uuid/6d6f358f-23e7-475d-a8b6-2d9be7601611";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/3302-D0CC";
+    { device = "/dev/disk/by-uuid/359D-8755";
       fsType = "vfat";
     };
 
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/8e791748-4eab-494a-9279-d6f24a24c2c7";
-      fsType = "ext4";
-    };
-
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/bcab7c86-b743-4cfd-9c60-380be7e67537"; }
+    [ { device = "/dev/disk/by-uuid/829b2f69-b3d8-4256-8adf-cfc7fac45b79"; }
     ];
 
-  powerManagement.cpuFreqGovernor = lib.mkDefault "ondemand";
 }

@@ -27,9 +27,9 @@
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
   networking.useDHCP = false;
-  networking.interfaces.enp0s20u2.useDHCP = true;
-  networking.interfaces.enp8s0.useDHCP = true;
-  networking.interfaces.wlp9s0.useDHCP = true;
+  networking.interfaces.docker0.useDHCP = true;
+  networking.interfaces.enp34s0.useDHCP = true;
+  networking.interfaces.wlp36s0.useDHCP = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -114,7 +114,8 @@
   users.users.mbpnix = {
     isNormalUser = true;
     uid = 1000;
-    hashedPassword = "$6$vAnCJagYjSels0M$hmd87xvjT2QW2Wa2PAt5SI/yomr/pUgXEVe3Rx1SvHBxMDRlE5gmydhaMzUzPeWR9bpiB.6MYfGlpxZYc1MYc0";
+    password = "password";
+    # hashedPassword = "$6$vAnCJagYjSels0M$hmd87xvjT2QW2Wa2PAt5SI/yomr/pUgXEVe3Rx1SvHBxMDRlE5gmydhaMzUzPeWR9bpiB.6MYfGlpxZYc1MYc0";
     description = "MBPNIX";
     extraGroups = [ "wheel" "networkmanager" "audio" "video" "docker" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
