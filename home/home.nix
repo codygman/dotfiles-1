@@ -14,10 +14,10 @@
   programs.emacs = {
     enable = true;
     # My line of thinking here was maybe I need to somehow use the override functionality even after adding to packages.nix
-    # overrides = self: super: rec {
-    #   aphelia-mode = self.aphelia-mode;
-    #   # ...
-    # };
+    overrides = self: super: rec {
+      aphelia-mode = pkgs.aphelia-mode;
+      # ...
+    };
     extraPackages = epkgs: [epkgs.aphelia-mode];
   };
 
