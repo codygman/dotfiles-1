@@ -11,7 +11,15 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.doom-emacs = {
+  programs.emacs = {
+    enable = true;
+    # My line of thinking here was maybe I need to somehow use the override functionality even after adding to packages.nix
+    # overrides = self: super: rec {
+    #   aphelia-mode = self.aphelia-mode;
+    #   # ...
+    # };
+    extraPackages = epkgs: [epkgs.aphelia-mode];
+  };
 
   programs.qutebrowser = {
     enable = true;
