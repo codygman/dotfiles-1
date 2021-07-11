@@ -2,17 +2,24 @@
   description = "cody";
 
   inputs = {
-    stable.url = "github:NixOS/nixpkgs/nixos-20.09";
-    unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
-    utils.url = "github:gytis-ivaskevicius/flake-utils-plus/staging";
+    stable.url = github:NixOS/nixpkgs/nixos-20.09;
+    unstable.url = github:NixOS/nixpkgs/nixos-unstable;
+    home-manager.url = github:nix-community/home-manager;
+    utils.url = github:gytis-ivaskevicius/flake-utils-plus/staging;
+    nix-doom-emacs.url = github:vlaci/nix-doom-emacs;
+
+    apheleia-mode = {
+      url = github:raxod502/apheleia;
+      flake = false;
+    };
+
     nur = {
-      url = "github:nix-community/NUR";
+      url = github:nix-community/NUR;
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, stable, unstable, nix-doom-emacs, home-manager, utils, nur }@inputs:
+  outputs = { self, stable, unstable, nix-doom-emacs, home-manager, utils, nur, ...}@inputs:
     utils.lib.systemFlake {
       inherit self inputs;
 

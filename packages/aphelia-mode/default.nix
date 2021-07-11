@@ -1,14 +1,8 @@
-{ pkgs, lib, fetchFromGitHub }:
+{ emacsPackages, srcs, lib, fetchFromGitHub }:
 
-pkgs.emacsPackages.trivialBuild {
+emacsPackages.trivialBuild {
     pname = "apheleia-mode";
-    packageRequires = [  ];
-    src = fetchFromGitHub { # TODO treat this as a flake input
-          owner = "raxod502";
-          repo = "apheleia";
-          rev = "876078f473cabd14129eb78d610ef2cc46ead4f1";
-          sha256 = "actIWr8fXYfPWRdMTmQFvn5PiJVRFIec7cwObjsn5lY=";
-    };
+    src = srcs.apheleia-mode;
 
     # INCOMPLETE
     meta = with lib; {

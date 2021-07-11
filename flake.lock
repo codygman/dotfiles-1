@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "apheleia-mode": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1621807207,
+        "narHash": "sha256-n37jJsNOGhSjUtQysG3NVIjjayhbOa52iTXBc8SyKXE=",
+        "owner": "raxod502",
+        "repo": "apheleia",
+        "rev": "f865c165dac606187a66b2b25a57d5099b452120",
+        "type": "github"
+      },
+      "original": {
+        "owner": "raxod502",
+        "repo": "apheleia",
+        "type": "github"
+      }
+    },
     "doom-emacs": {
       "flake": false,
       "locked": {
@@ -199,30 +215,32 @@
         "rotate-text": "rotate-text"
       },
       "locked": {
-        "lastModified": 1617116284,
-        "narHash": "sha256-A47uqsHJAP7QMNwiEitqGUTqfzOlqegnQ+rllC7jFLk=",
-        "path": "/nix/store/w861s7h4fzr7px4rhbirz52fal9lj0q6-source",
-        "rev": "51645030623075a50f0f2fb8e95d113336fa109f",
-        "type": "path"
+        "lastModified": 1625001464,
+        "narHash": "sha256-3RGoNYZ4hAo+iRTfy6qJfQ3YzLMDDFzBIUQNEmCv6Ms=",
+        "owner": "vlaci",
+        "repo": "nix-doom-emacs",
+        "rev": "3893c50877a9d2d5d4aeee524ba1539f22115f1f",
+        "type": "github"
       },
       "original": {
-        "id": "nix-doom-emacs",
-        "type": "indirect"
+        "owner": "vlaci",
+        "repo": "nix-doom-emacs",
+        "type": "github"
       }
     },
     "nix-straight": {
       "flake": false,
       "locked": {
-        "lastModified": 1592852066,
-        "narHash": "sha256-IwmBDtGv7GamiwCG+awZN6VgtHqJElkv/ic0VrVXAkI=",
+        "lastModified": 1621543597,
+        "narHash": "sha256-E/m2Hrw2og//CfOCOWe2yapYC01Tqhozn4YMPYJsC3o=",
         "owner": "vlaci",
         "repo": "nix-straight.el",
-        "rev": "9e6f7d71760b997b09d9bd3046257bc9ec17265b",
+        "rev": "8e84d04f10b2298de856b2b8b9a0d13abc91b5ca",
         "type": "github"
       },
       "original": {
         "owner": "vlaci",
-        "ref": "v2.1.0",
+        "ref": "v2.2.0",
         "repo": "nix-straight.el",
         "type": "github"
       }
@@ -369,6 +387,7 @@
     },
     "root": {
       "inputs": {
+        "apheleia-mode": "apheleia-mode",
         "home-manager": "home-manager",
         "nix-doom-emacs": "nix-doom-emacs",
         "nur": "nur",
