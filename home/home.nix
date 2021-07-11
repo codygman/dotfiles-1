@@ -12,8 +12,9 @@
   programs.home-manager.enable = true;
 
   programs.doom-emacs = {
+
+  programs.qutebrowser = {
     enable = true;
-    doomPrivateDir = ./doom.d;
   };
 
   services.emacs = {
@@ -28,13 +29,13 @@
 
   xdg.enable = true;
 
-  gtk = {
-    enable = true;
-    iconTheme.name = "Arc";
-    iconTheme.package = pkgs.arc-icon-theme;
-    theme.name = "Sweet-Dark";
-    theme.package = pkgs.sweet;
-  };
+  # gtk = {
+  #   enable = true;
+  #   iconTheme.name = "Arc";
+  #   iconTheme.package = pkgs.arc-icon-theme;
+  #   theme.name = "Sweet-Dark";
+  #   theme.package = pkgs.sweet;
+  # };
 
   # nvim
   programs.neovim = {
@@ -110,8 +111,8 @@
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "mbpnix";
-  home.homeDirectory = "/home/mbpnix";
+  home.username = "cody";
+  home.homeDirectory = "/home/cody";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
