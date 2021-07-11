@@ -201,15 +201,13 @@
       "locked": {
         "lastModified": 1617116284,
         "narHash": "sha256-A47uqsHJAP7QMNwiEitqGUTqfzOlqegnQ+rllC7jFLk=",
-        "owner": "vlaci",
-        "repo": "nix-doom-emacs",
+        "path": "/nix/store/w861s7h4fzr7px4rhbirz52fal9lj0q6-source",
         "rev": "51645030623075a50f0f2fb8e95d113336fa109f",
-        "type": "github"
+        "type": "path"
       },
       "original": {
-        "owner": "vlaci",
-        "repo": "nix-doom-emacs",
-        "type": "github"
+        "id": "nix-doom-emacs",
+        "type": "indirect"
       }
     },
     "nix-straight": {
